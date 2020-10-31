@@ -10,6 +10,12 @@ import (
 var router = gin.Default()
 
 func StartApp() {
+	session, err := cassandra.CreateSession()
+	if err != nil {
+		panic(err)
+	}
+	defer session.Close()
+
 	atService := accesstoken.NewService(db.NewRepository())
 	atHandler := http.NewHandler(atService)
 	router.GET("/oauth/access_token/:access_token_id", atHandler.GetByID)
