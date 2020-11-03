@@ -7,7 +7,7 @@ import (
 	"github.com/gocql/gocql"
 	"github.com/yesseneon/bookstore_oauth_api/clients/cassandra"
 	"github.com/yesseneon/bookstore_oauth_api/domain/accesstoken"
-	"github.com/yesseneon/bookstore_oauth_api/utils/errors"
+	"github.com/yesseneon/bookstore_utils/errors"
 )
 
 type DBRepository interface {

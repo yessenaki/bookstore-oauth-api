@@ -4,7 +4,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/yesseneon/bookstore_oauth_api/utils/errors"
+	"github.com/yesseneon/bookstore_utils/errors"
 )
 
 const expirationTime = 24

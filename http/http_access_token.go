@@ -5,7 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/yesseneon/bookstore_oauth_api/domain/accesstoken"
-	"github.com/yesseneon/bookstore_oauth_api/utils/errors"
+	"github.com/yesseneon/bookstore_utils/errors"
 )
 
 type AccessTokenHandler interface {

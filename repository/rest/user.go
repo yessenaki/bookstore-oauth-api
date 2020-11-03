@@ -5,7 +5,7 @@ import (
 
 	"github.com/go-resty/resty/v2"
 	"github.com/yesseneon/bookstore_oauth_api/domain/user"
-	"github.com/yesseneon/bookstore_oauth_api/utils/errors"
+	"github.com/yesseneon/bookstore_utils/errors"
 )
 
 type RESTUserRepository interface {

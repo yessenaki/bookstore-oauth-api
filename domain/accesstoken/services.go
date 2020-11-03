@@ -3,7 +3,7 @@ package accesstoken
 import (
 	"strings"
 
-	"github.com/yesseneon/bookstore_oauth_api/utils/errors"
+	"github.com/yesseneon/bookstore_utils/errors"
 )
 
 type Repository interface {
