@@ -2,14 +2,15 @@ package http
 
 import (
 	"net/http"
-	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/yesseneon/bookstore_oauth_api/src/domain/accesstoken"
+	"github.com/yesseneon/bookstore_oauth_api/domain/accesstoken"
+	"github.com/yesseneon/bookstore_oauth_api/utils/errors"
 )
 
 type AccessTokenHandler interface {
 	GetByID(*gin.Context)
+	Create(*gin.Context)
 }
 
 type accessTokenHandler struct {
@@ -30,4 +31,20 @@ func (h *accessTokenHandler) GetByID(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, accessToken)
+}
+
+func (h *accessTokenHandler) Create(c *gin.Context) {
+	var at accesstoken.AccessToken
+	if err := c.ShouldBindJSON(&at); err != nil {
+		restErr := errors.BadRequest("Invalid JSON body")
+		c.JSON(restErr.Status, restErr)
+		return
+	}
+
+	if restErr := h.service.Create(at); restErr != nil {
+		c.JSON(restErr.Status, restErr)
+		return
+	}
+
+	c.JSON(http.StatusOK, at)
 }
