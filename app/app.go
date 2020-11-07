@@ -2,9 +2,9 @@ package app
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/yesseneon/bookstore_oauth_api/domain/accesstoken"
-	"github.com/yesseneon/bookstore_oauth_api/http"
-	"github.com/yesseneon/bookstore_oauth_api/repository/db"
+	"github.com/yesseneon/bookstore-oauth-api/domain/accesstoken"
+	"github.com/yesseneon/bookstore-oauth-api/http"
+	"github.com/yesseneon/bookstore-oauth-api/repository/db"
 )
 
 var router = gin.Default()

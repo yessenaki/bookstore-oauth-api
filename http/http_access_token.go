@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/yesseneon/bookstore_oauth_api/domain/accesstoken"
-	"github.com/yesseneon/bookstore_utils/errors"
+	"github.com/yesseneon/bookstore-oauth-api/domain/accesstoken"
+	"github.com/yesseneon/bookstore-utils/errors"
 )
 
 type AccessTokenHandler interface {

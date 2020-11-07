@@ -4,8 +4,8 @@ import (
 	"log"
 
 	"github.com/go-resty/resty/v2"
-	"github.com/yesseneon/bookstore_oauth_api/domain/user"
-	"github.com/yesseneon/bookstore_utils/errors"
+	"github.com/yesseneon/bookstore-oauth-api/domain/user"
+	"github.com/yesseneon/bookstore-utils/errors"
 )
 
 type RESTUserRepository interface {
